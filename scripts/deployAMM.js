@@ -8,7 +8,7 @@ async function main() {
     await amm.deployed(); // Chờ cho hợp đồng được triển khai xong
     console.log("AMM deployed to: ", amm.address); // In địa chỉ của hợp đồng AMM
 }
-
+// AMM contract: 0x7F94eb097E1a02E438F6a5f4d2B6Def70193cCEf
 main()
     .catch((error) => {
         console.error(error); // In lỗi nếu có

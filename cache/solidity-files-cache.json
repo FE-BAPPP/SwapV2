@@ -265,6 +265,44 @@
       "artifacts": [
         "MyToken2"
       ]
+    },
+    "D:\\SwapV2\\contracts\\SimpleAMM.sol": {
+      "lastModificationDate": 1749296148675,
+      "contentHash": "0043fa4337c14914b6ff296fb814cfbc",
+      "sourceName": "contracts/SimpleAMM.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SimpleAMM"
+      ]
     }
   }
 }

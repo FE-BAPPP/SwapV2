@@ -1,7 +1,7 @@
 async function main() {
     const [deployer] = await ethers.getSigners(); // Lấy địa chỉ ví của người triển khai hợp đồng
-    const token1Address = "0x2cCAB83BEF317Ce6aCeB006CF883f202dd24baA2";
-    const token2Address = "0xCF012C4E83c343E335d39aC32989baf3F2eB44dE";
+    const token1Address = "0x45e5d089D4702Bf5Dd001F8cd8b336Fcfd8f6508";
+    const token2Address = "0x8Ec5d08A7DD1fD37bA5073CDb82b8C03fDC3c8D9";
 
     const AMM = await ethers.getContractFactory("SimpleAMM"); // Lấy contract factory cho AMM
     const amm = await AMM.deploy(token1Address, token2Address); // Triển khai hợp đồng AMM với địa chỉ của Token1 và Token2

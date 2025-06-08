@@ -34,6 +34,15 @@ contract SimpleAMM {
         reserve2 -= amountBOut;
     }
 
+    function swapBForA(uint amountBIn) public {
+        uint amountAOut = getAmountOut(amountBIn, reserve2, reserve1); 
+        require(amountAOut > 0, "Insufficient output");
+        token2.transferFrom(msg.sender, address(this), amountBIn);
+        token1.transfer(msg.sender, amountAOut);
+        reserve2 += amountBIn;
+        reserve1 -= amountAOut;
+    }
+    //Ham tinh toan so luong nhan duoc theo AMM Uniswap v2
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) public pure returns (uint) {
         uint amountInWithFee = amountIn * 997 / 1000; //ap dung phi 0.3%, chi co 99,7% token la duoc dung swap
         uint numerator = amountInWithFee *reserveOut;  //tài sản còn lại trong pool sau swap
